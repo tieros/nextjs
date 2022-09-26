@@ -18,7 +18,7 @@ export async function getStaticProps() {
     //can connect to DB here since it is secure (server-side)
 
     const client = await MongoClient.connect(
-        'mongodb+srv://elifsutanyeri:nRBZ6kUGZoLgoI46@apartmentmanagement.1ukos.mongodb.net/?retryWrites=true&w=majority',
+        process.env.MONGO,
     );
 
     const db = client.db();
